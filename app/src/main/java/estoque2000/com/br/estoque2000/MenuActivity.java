@@ -11,6 +11,7 @@ public class MenuActivity extends AppCompatActivity {
     Button btn_Fornecedor;
     Button btn_Local;
     Button btn_Categoria;
+    Button btn_Estoque;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MenuActivity extends AppCompatActivity {
         btn_Fornecedor = findViewById(R.id.Fornecedor);
         btn_Local = findViewById(R.id.Locais);
         btn_Categoria = findViewById(R.id.Categoria);
+        btn_Estoque = findViewById(R.id.Estoque);
 
         btn_Fornecedor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +38,14 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(vaiProLocal);
             }
         });
+        btn_Estoque.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent vaiProEstoque = new Intent(MenuActivity.this, EstoqueActivity.class);
+                startActivity(vaiProEstoque);
+            }
+        });
+
 
    /*     btn_Categoria.setOnClickListener(new View.OnClickListener() {
             @Override

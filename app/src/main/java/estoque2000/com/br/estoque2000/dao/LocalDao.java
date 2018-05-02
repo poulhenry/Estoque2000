@@ -14,7 +14,7 @@ import estoque2000.com.br.estoque2000.modelo.Local;
 
 public class LocalDao extends SQLiteOpenHelper{
     public LocalDao(Context context) {
-        super(context, "Local2000", null,1);
+        super(context, "Local2000", null,3);
     }
 
     @Override

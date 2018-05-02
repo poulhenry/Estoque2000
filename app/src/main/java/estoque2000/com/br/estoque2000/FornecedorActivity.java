@@ -1,6 +1,7 @@
 package estoque2000.com.br.estoque2000;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
@@ -26,8 +27,13 @@ public class FornecedorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fornecedor);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Fornecedor");
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Fornecedor");
 
         listaFornecedores = findViewById(R.id.lista_fornecedores);
         listaFornecedores.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -83,5 +89,13 @@ public class FornecedorActivity extends AppCompatActivity {
                return false;
            }
        });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

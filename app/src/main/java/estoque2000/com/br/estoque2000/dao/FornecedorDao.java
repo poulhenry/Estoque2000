@@ -17,7 +17,7 @@ public class FornecedorDao extends SQLiteOpenHelper{
 
     public FornecedorDao(Context context)
     {
-        super(context, "Estoque2000", null,1);
+        super(context, "Estoque2000", null,3);
     }
 
     @Override

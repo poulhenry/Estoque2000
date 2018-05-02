@@ -2,6 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--não remover o comentario abaixo por favor!-->
+    <!--<item-->
+        <!--android:id="@+id/menu_formulario_estoque_cancelar"-->
+        <!--android:icon="@drawable/ic_action_name"-->
+        <!--android:title="Cancel"-->
+        <!--app:showAsAction="always" />-->
+
     <item android:id="@+id/menu_formulario_local_ok"
         android:title="OK"
         android:icon="@drawable/ic_confirmar"

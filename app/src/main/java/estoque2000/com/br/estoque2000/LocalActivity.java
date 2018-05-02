@@ -1,6 +1,7 @@
 package estoque2000.com.br.estoque2000;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -27,6 +28,14 @@ public class LocalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_local);
+
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Local");
 
       listaLocal = findViewById(R.id.Lista_local);
 
@@ -68,8 +77,6 @@ public class LocalActivity extends AppCompatActivity {
         super.onResume();
     }
 
-
-
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, final ContextMenu.ContextMenuInfo menuInfo) {
         MenuItem deletar =  menu.add("DELETAR");
@@ -84,5 +91,13 @@ public class LocalActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

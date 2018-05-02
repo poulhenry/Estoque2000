@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormularioEstoque"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/estoque_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/estoque_preco"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-63dp"
+        android:hint="Nome" />
+
+    <EditText
+        android:id="@+id/estoque_preco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:hint="preço" />
+
+    <EditText
+        android:id="@+id/estoque_quant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/estoque_preco"
+        android:hint="Quantidade" />
+
+    <EditText
+        android:id="@+id/estoque_categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="173dp"
+        android:hint="Categoria" />
+
+</RelativeLayout>

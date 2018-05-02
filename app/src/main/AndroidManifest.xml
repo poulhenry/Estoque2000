@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".FornecedorActivity" />
         <activity android:name=".FormularioFornecedorActivity" />
-        <activity android:name=".LocalActivity"></activity>
-        <activity android:name=".FormularioLocalActivity"></activity>
+        <activity android:name=".LocalActivity" />
+        <activity android:name=".FormularioLocalActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".EstoqueActivity"/>
+        <activity android:name=".FormularioEstoque">
+        </activity>
     </application>
 
 </manifest>
